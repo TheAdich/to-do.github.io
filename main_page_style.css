@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #7E40F6;
+    color: white;
+}
+
+.new_user {
+    text-align: center;
+    font-size: 3em;
+    width: 100%;
+    max-width: 600px;
+    margin: 1em auto 0px;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto 0px;
+    background-color: white;
+    color: #7E40F6;
+    height: fit-content;
+    border: 2px solid rgb(74, 55, 184);
+    border-radius: 10px;
+}
+
+.app-title {
+    margin: 10px;
+    padding: 5px;
+    margin-bottom: 0px;
+}
+
+.app-title>h1 {
+    -webkit-text-stroke: 0.2px orange;
+    margin-bottom: 8px;
+}
+
+.app-title img {
+    width: 50px;
+    position: relative;
+    top: 10px;
+}
+
+#task-input {
+    width: 90%;
+    padding: 3px 4px;
+    border: 0.5px solid grey;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+::placeholder {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1em;
+}
+
+#add-btn {
+    width: 50px;
+    padding: 2px 3px;
+    background: none;
+    border: 0.5px solid grey;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    transition: all 0.5s ease-in;
+    overflow: hidden;
+}
+
+#add-btn:hover {
+    color: white;
+}
+
+#add-btn::before {
+    content: "";
+    position: absolute;
+    background: #F3AA60;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    border-radius: 12px;
+    transition: all 0.5s ease-in-out;
+}
+
+#add-btn:hover::before {
+    left: 0%;
+}
+
+.list-container {
+    margin: 10px;
+    padding: 5px;
+}
+
+ul li {
+    list-style: none;
+    width: 90%;
+    margin-left: 5px;
+    color: rgb(254, 132, 111);
+    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    position: relative;
+    left: 20px;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url(unchecked_3_11zon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    left: -35px;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url(checked_1_11zon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    left: -35px;
+}

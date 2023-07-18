@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #7E40F6;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title h1 {
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke: 0.1px white;
+    color: #7E40F6;
+    font-size: 4em;
+    position: relative;
+}
+
+.main {
+    margin: 10px 0px;
+    letter-spacing: 3px;
+    font-size: 1.3em;
+}
+
+.main>input {
+    margin-left: 15%;
+    padding: 2px 7px;
+    margin-top: 10px;
+    outline: none;
+    border-color: #7E40F6;
+    border-radius: 0.6em;
+}
+
+::placeholder {
+    font-family: 'Raleway', sans-serif;
+    color: grey;
+}
+
+.main>h2 {
+    position: relative;
+}
+
+.main>h2::before {
+    content: "";
+    position: absolute;
+    background: white;
+    bottom: 0;
+    left: 0%;
+    width: 0%;
+    height: 3px;
+    transition: all 0.5s ease-in-out;
+}
+
+.main>h2:hover::before {
+    width: 100%;
+}
+
+#btn {
+    width: 6em;
+    padding: 1px 3px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid white;
+    background-color: white;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: #7E40F6;
+    color: white;
+}
+
+.login {
+    background: white;
+    width: 15em;
+    color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: fit-content;
+    font-family: 'Lora', serif;
+    color: rgb(111, 111, 111);
+    border-radius: 0px 0px 4px 4px;
+    overflow: hidden;
+    visibility: hidden;
+    transform: translateX(240px);
+    transition: all 0.5s ease-in-out;
+}
+
+.login>h3 {
+    display: inline-block;
+    margin: 5px 3px;
+    color: green;
+}
+
+#check-icon {
+    font-size: larger;
+    margin: 5px 3px;
+    color: green;
+}
